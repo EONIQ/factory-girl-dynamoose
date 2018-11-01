@@ -1,0 +1,40 @@
+{
+  "name": "factory-girl-dynamoose",
+  "version": "1.0.0",
+  "description": "Dynamoose Adapter for the factory-girl Node library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jesseclark/factory-girl-dynamoose.git"
+  },
+  "keywords": [
+    "factory-girl",
+    "factory",
+    "test",
+    "bdd",
+    "tdd",
+    "fixture",
+    "dynamoose"
+  ],
+  "author": "Charles Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EONIQ/factory-girl-dynamoose/issues"
+  },
+  "homepage": "https://github.com/EONIQ/factory-girl-dynamoose",
+  "files": [
+    "index.js",
+    "LICENSE",
+    "config/",
+    "test/"
+  ],
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "factory-girl": "^1.1.0",
+    "mocha": "^2.0.1",
+    "mongoose": "^3.8.19"
+  }
+}
