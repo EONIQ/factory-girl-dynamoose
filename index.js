@@ -9,15 +9,19 @@ DynamooseAdapter.prototype.get = function(model, attr, Model) {
 };
 
 DynamooseAdapter.prototype.set = function(props, model, Model) {
-  return Model.update(model, props);
+  Object.keys(props).forEach(key => {
+    model[key] = props[key];
+  });
+
+  return model;
 };
 
 DynamooseAdapter.prototype.save = function(model, Model, callback) {
-  return Promise.resolve(model.save()).then(() => model);
+  return model.save();
 };
 
 DynamooseAdapter.prototype.destroy = function(model, Model, callback) {
-  return Promise.resolve(model.delete()).then(() => model);
+  return model.delete();
 };
 
 module.exports = DynamooseAdapter;
