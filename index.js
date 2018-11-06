@@ -17,12 +17,12 @@ DynamooseAdapter.prototype.set = function(props, model, Model) {
   return newModel;
 };
 
-DynamooseAdapter.prototype.save = function(model, Model, callback) {
-  return model.save().then(result => callback(result));
+DynamooseAdapter.prototype.save = function(model, Model) {
+  return model.save();
 };
 
-DynamooseAdapter.prototype.destroy = function(model, Model, callback) {
-  return model.delete().then(result => callback(result));
+DynamooseAdapter.prototype.destroy = function(model, Model) {
+  return model.delete();
 };
 
 module.exports = DynamooseAdapter;
